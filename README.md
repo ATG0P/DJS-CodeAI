@@ -39,9 +39,11 @@ After cleaning, the maximum age was 90.
 
 ## 4. Handling Missing Gender Values
 
-The gender_code column contained `?` values. Since `?` represents missing information rather than an actual category, I replaced it with NaN and removed those rows:<p>
-`df_cleaner["gender_code"] = df_cleaner["gender_code"].replace("?", np.nan)`
-`df_cleaner = df_cleaner.dropna(subset=["gender_code"])`
+The gender_code column contained `?` values. Since `?` represents missing information rather than an actual category, I replaced it with NaN and removed those rows:
+<p>
+df_cleaner["gender_code"] = df_cleaner["gender_code"].replace("?", np.nan)
+<p>
+df_cleaner = df_cleaner.dropna(subset=["gender_code"])
 
 I chose to handle this column specifically rather than deleting the entire column.
 
