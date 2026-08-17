@@ -49,7 +49,7 @@ I chose to handle this column specifically rather than deleting the entire colum
 
 ## 5. Outliers
 
-Some variables, such as sample_weight_index and financial features, contained extreme values. I did not remove all of them because they may represent valid observations. I only removed values that could reasonably be considered unrealistic based on the data and domain context.
+Some variables, such as `sample_weight_index` and `weekly_work_hours`, contained extreme values. I did not remove all of them because they may represent valid observations. I only removed values that could reasonably be considered unrealistic based on the data and domain context.
 
 ## 6. Conclusion
 
