@@ -33,15 +33,15 @@ I did not automatically remove every outlier because an unusual value is not nec
 ## 3. Handling Unrealistic Ages
 
 The `age_years` column contained some unrealistic values above 122. I considered these to be data-quality issues and removed those rows:
-df_cleaner = df[df["age_years"] < 122].copy()
+`df_cleaner = df[df["age_years"] < 122].copy()`
 
 After cleaning, the maximum age was 90.
 
 ## 4. Handling Missing Gender Values
 
-The gender_code column contained ? values. Since ? represents missing information rather than an actual category, I replaced it with NaN and removed those rows:
-df_cleaner["gender_code"] = df_cleaner["gender_code"].replace("?", np.nan)
-df_cleaner = df_cleaner.dropna(subset=["gender_code"])
+The gender_code column contained `?` values. Since `?` represents missing information rather than an actual category, I replaced it with NaN and removed those rows:
+`df_cleaner["gender_code"] = df_cleaner["gender_code"].replace("?", np.nan)`
+`df_cleaner = df_cleaner.dropna(subset=["gender_code"])`
 
 I chose to handle this column specifically rather than deleting the entire column.
 
